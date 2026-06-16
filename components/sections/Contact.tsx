@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import SectionContainer from '@/components/SectionContainer';
-import { Mail, Github, Linkedin, Facebook, MapPin, Phone, Calendar } from 'lucide-react';
+import { Mail, Github, Linkedin, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 
 const Contact = () => {
@@ -18,8 +18,8 @@ const Contact = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'your.email@example.com',
-      link: 'mailto:your.email@example.com',
+      value: 'ramirezdonpiedro@gmail.com',
+      link: 'mailto:ramirezdonpiedro@gmail.com',
     },
     {
       icon: Phone,
@@ -39,13 +39,7 @@ const Contact = () => {
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      url: 'https://linkedin.com',
-      color: 'hover:text-cyan-400',
-    },
-    {
-      icon: Facebook,
-      label: 'Facebook',
-      url: 'https://facebook.com',
+      url: 'https://www.linkedin.com/in/don-piedro-ramirez-8388363b3',
       color: 'hover:text-cyan-400',
     },
   ];
@@ -74,7 +68,6 @@ const Contact = () => {
     e.preventDefault();
     setFormStatus('loading');
 
-    // Simulate form submission
     setTimeout(() => {
       setFormStatus('success');
       (e.target as HTMLFormElement).reset();
@@ -88,7 +81,7 @@ const Contact = () => {
       title="Let's Connect"
       subtitle="Interested in opportunities or want to chat about tech? Reach out!"
     >
-      <div className="grid md:grid-cols-2 gap-12">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12">
         {/* Contact Info */}
         <motion.div
           variants={containerVariants}
@@ -108,7 +101,7 @@ const Contact = () => {
                   href={info.link}
                   className="glass-effect p-4 rounded-lg border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300 flex items-start space-x-4 group"
                 >
-                  <div className="text-cyan-400 group-hover:text-green-400 transition-colors">
+                  <div className="text-cyan-400 group-hover:text-green-400 transition-colors flex-shrink-0">
                     <Icon size={24} />
                   </div>
                   <div>

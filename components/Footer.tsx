@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Facebook } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className="bg-secondary/50 border-t border-cyan-500/20 py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -55,7 +55,7 @@ const Footer = () => {
                 <Github size={20} />
               </motion.a>
               <motion.a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/don-piedro-ramirez-8388363b3"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.2 }}
@@ -64,20 +64,11 @@ const Footer = () => {
                 <Linkedin size={20} />
               </motion.a>
               <motion.a
-                href="mailto:your.email@example.com"
+                href="mailto:ramirezdonpiedro@gmail.com"
                 whileHover={{ scale: 1.2 }}
                 className="text-gray-400 hover:text-cyan-400 transition-colors"
               >
                 <Mail size={20} />
-              </motion.a>
-              <motion.a
-                href="https://facebook.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2 }}
-                className="text-gray-400 hover:text-cyan-400 transition-colors"
-              >
-                <Facebook size={20} />
               </motion.a>
             </div>
           </motion.div>

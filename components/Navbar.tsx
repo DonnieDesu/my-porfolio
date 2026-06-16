@@ -62,7 +62,7 @@ const Navbar = () => {
               <Github size={20} />
             </motion.a>
             <motion.a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/don-piedro-ramirez-8388363b3"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1 }}
@@ -71,7 +71,7 @@ const Navbar = () => {
               <Linkedin size={20} />
             </motion.a>
             <motion.a
-              href="mailto:your.email@example.com"
+              href="mailto:ramirezdonpiedro@gmail.com"
               whileHover={{ scale: 1.1 }}
               className="text-gray-400 hover:text-cyan-400 transition-colors"
             >
@@ -98,18 +98,30 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="md:hidden pb-4"
+            className="md:hidden pb-4 space-y-2"
           >
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="block py-2 text-gray-300 hover:text-cyan-400 transition-colors"
+                className="block py-2 px-4 text-gray-300 hover:text-cyan-400 transition-colors text-sm"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </a>
             ))}
+            {/* Mobile Social Links */}
+            <div className="flex gap-4 pt-4 px-4 border-t border-cyan-500/20">
+              <a href="https://github.com/DonnieDesu" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400">
+                <Github size={20} />
+              </a>
+              <a href="https://www.linkedin.com/in/don-piedro-ramirez-8388363b3" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400">
+                <Linkedin size={20} />
+              </a>
+              <a href="mailto:ramirezdonpiedro@gmail.com" className="text-gray-400 hover:text-cyan-400">
+                <Mail size={20} />
+              </a>
+            </div>
           </motion.div>
         )}
       </div>
