@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Don Piedro F. Ramirez - Software Developer & Cybersecurity Professional',
@@ -17,7 +19,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className="bg-primary text-white antialiased">
+        <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );
