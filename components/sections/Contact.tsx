@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionContainer from '../components/SectionContainer';
+import SectionContainer from '@/components/SectionContainer';
 import { Mail, Github, Linkedin, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 
