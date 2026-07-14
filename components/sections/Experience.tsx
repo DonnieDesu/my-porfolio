@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionContainer from '@/components/SectionContainer';
+import SectionContainer from '../components/SectionContainer';
 
 const Experience = () => {
   const experiences = [
